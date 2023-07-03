@@ -1,0 +1,14 @@
+name: 'Godot export action'
+description: 'Github action to build/export Godot 4 projects'
+inputs:
+    version:
+        required: true
+    release:
+        required: false
+    architecture:
+        required: true
+outputs:
+    - godot_executable
+runs:
+    using: 'oven/bun'
+    main: 'main.ts'
