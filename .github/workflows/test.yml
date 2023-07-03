@@ -1,0 +1,13 @@
+on: [push]
+jobs:
+    test_job:
+        runs-on: ubuntu-latest
+        name: Test godot export action
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: Godot export action
+              uses: ./
+              id: godot_export_action
+            - name: Get the output executable
+              run: echo "The executable is ${{ steps.godot_export_action.outputs.godot_executable }}"

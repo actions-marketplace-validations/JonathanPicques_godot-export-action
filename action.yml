@@ -1,5 +1,8 @@
 name: 'Godot export action'
 description: 'Github action to build/export Godot 4 projects'
+branding:
+    icon: battery-charging
+    color: purple
 inputs:
     version:
         required: true
@@ -8,7 +11,8 @@ inputs:
     architecture:
         required: true
 outputs:
-    - godot_executable
+    godot_executable:
+        description: Executable path of godot
 runs:
-    using: 'oven/bun'
-    main: 'main.ts'
+    using: 'docker'
+    image: 'Dockerfile'

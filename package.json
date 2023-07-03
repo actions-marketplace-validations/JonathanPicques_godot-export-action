@@ -1,7 +1,4 @@
 {
-    "scripts": {
-        "dev": "RUNNER_TEMP=$(pwd)/tmp RUNNER_TOOL_CACHE=$(pwd)/cache bun main.ts"
-    },
     "dependencies": {
         "@actions/core": "^1.10.0",
         "@actions/exec": "^1.1.1",
